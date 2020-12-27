@@ -1,29 +1,7 @@
-# testvuecli3
+# vue练习项目
+vuecli3的脚手架练习
 
-## Project setup
-```
-npm install
-```
+## vue动态路由
+vue -> router -> index.js
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
