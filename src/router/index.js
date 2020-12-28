@@ -1,12 +1,21 @@
 //配置相关路由信息
 import VueRouter from 'vue-router'
 import Vue from 'vue'
-import Home from '../components/Home'
-import About from '../components/About'
-import User from '../components/User'
+// 懒加载
+const Home = () => import('../components/Home')
+const HomeNews = () =>import('../components/HomeNews')
+const HomeMessage = () =>import('../components/HomeMessage')
+const About = () => import('../components/About')
+const User = () => import('../components/User')
+// import Home from '../components/Home'
+// import About from '../components/About'
+// import User from '../components/User'
 
 // 1.通过Vue.use(插件),安装插件
 Vue.use(VueRouter)
+
+// 懒加载
+
 
 
 const routes = [
@@ -16,7 +25,23 @@ const routes = [
   },
   {
     path: '/home',
-    component: Home
+    component: Home,
+    children: [
+      {
+        path: '' ,
+        redirect: 'news'
+      },
+      {
+        // 子路由不需要加/
+        path: 'news',
+        component: HomeNews
+      },
+      {
+        path: 'message',
+        component: HomeMessage
+      }
+
+    ]
   },
   {
     path:'/about',
