@@ -5,8 +5,10 @@ import Vue from 'vue'
 const Home = () => import('../components/Home')
 const HomeNews = () =>import('../components/HomeNews')
 const HomeMessage = () =>import('../components/HomeMessage')
+
 const About = () => import('../components/About')
 const User = () => import('../components/User')
+const Profile = () => import('../components/profile')
 // import Home from '../components/Home'
 // import About from '../components/About'
 // import User from '../components/User'
@@ -50,7 +52,12 @@ const routes = [
   {
     path: '/user/:aaaa',
     component: User
+  },
+  {
+    path: '/profile',
+    component: Profile
   }
+
 
 
 ]
