@@ -11,7 +11,21 @@
 
 <script>
   export default {
-    name: "Home"
+    name: "Home",
+    // 创建的时候回调
+    created() {
+      console.log('created');
+    },
+    // 挂载的时候回调
+    mounted() {
+      console.log('mounted');
+    },
+    // 更新的时候回调
+    updated() {
+      console.log('updated');
+
+    }
+
   }
 </script>
 
